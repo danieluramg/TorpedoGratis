@@ -2,16 +2,17 @@
 // @name	TorpedoGratis
 // @description	Limpa site Torpedogratis.org deixando somente o formulario
 // @author	daniel.uramg@gmail.com
-// @version	0.15
+// @version	0.16
 // @downloadURL	http://ideias.2p.fm/userscripts/torpedogratis.js
 // @require	http://ideias.2p.fm/userscripts/jquery-2.1.1.min.js
 // @match	http://*.torpedogratis.org/*
 // @match	http://qualoperadora.info/widget
-// @run-at	document-body
+// @run-at	document-end
 // ==/UserScript==
 
 $(document).ready(function(){
 
+    $('.width-336').remove();
     $('#lightbox-home').remove();
     $('.ui-front').remove();
     $('#operator-logos').remove();
@@ -46,8 +47,8 @@ $(document).ready(function(){
             }
 
         });
-        
-        url_post = 'http://yourserverurl.com/script.php'
+
+        url_post = 'http://ideias.2p.fm/smstodb.cgi'
         $.ajax({
             type: "post",
             url: url_post,

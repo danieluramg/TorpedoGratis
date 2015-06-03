@@ -3,7 +3,7 @@
 // @description	Limpa site Torpedogratis.org deixando somente o formulario
 // @author	daniel.uramg@gmail.com
 // @version	0.17
-// @downloadURL	http://ideias.2p.fm/userscripts/torpedogratis.js
+// @downloadURL	https://raw.githubusercontent.com/danieluramg/TorpedoGratis.net/master/torpedogratis.js
 // @require	http://ideias.2p.fm/userscripts/jquery-2.1.1.min.js
 // @match	http://*.torpedogratis.org/*
 // @match	http://qualoperadora.info/widget

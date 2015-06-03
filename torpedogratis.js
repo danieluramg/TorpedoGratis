@@ -2,25 +2,22 @@
 // @name	TorpedoGratis
 // @description	Limpa site Torpedogratis.org deixando somente o formulario
 // @author	daniel.uramg@gmail.com
-// @version	0.16
+// @version	0.17
 // @downloadURL	http://ideias.2p.fm/userscripts/torpedogratis.js
 // @require	http://ideias.2p.fm/userscripts/jquery-2.1.1.min.js
 // @match	http://*.torpedogratis.org/*
 // @match	http://qualoperadora.info/widget
-// @run-at	document-end
+// @run-at	document-body
 // ==/UserScript==
 
 $(document).ready(function(){
 
-    $('.width-336').remove();
-    $('#lightbox-home').remove();
-    $('.ui-front').remove();
-    $('#operator-logos').remove();
-    $('.title').remove();
-    $('.header').remove();
-    $('.width-300').remove();
-    $('.bottom-data').remove();
-    $('.right').remove();
+    $('#second-column').remove();
+    $('#mini-header').remove();
+    $('#menu').remove();
+    $('#social').remove();
+    $('#right').remove();
+    $('#bottom-widget').remove();
     $('#Numero_Remetente').attr('value', '32012524');
     $('#Nome_Remetente').attr('value', 'Digipaper');
     $('#Mensagem').removeAttr('onblur onfocus onkeypress');

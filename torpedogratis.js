@@ -2,8 +2,8 @@
 // @name	TorpedoGratis
 // @description	Limpa site Torpedogratis.org deixando somente o formulario
 // @author	daniel.uramg@gmail.com
-// @version	0.18
-// @downloadURL	https://raw.githubusercontent.com/danieluramg/TorpedoGratis.net/master/torpedogratis.js
+// @version	0.19
+// @downloadURL	https://raw.githubusercontent.com/danieluramg/TorpedoGratis/master/torpedogratis.js
 // @require	http://ideias.2p.fm/userscripts/jquery-2.1.1.min.js
 // @match	http://*.torpedogratis.org/*
 // @match	http://qualoperadora.info/widget
@@ -17,7 +17,8 @@ $(document).ready(function(){
 
         var form = $('#formulario').html(); //variavel com o formulario pronto
         $('body').remove(); //remove todo o corpo da pagina
-        $('head').after('<div id="formulario" class="default-content">' + form + '</div>'); //injeta a div do form abaixo do cabeçalho
+        $('head').after('<div class="box-default"><div id="formulario" class="default-content">' + form + '</div></div>'); //injeta a div do form abaixo do cabeçalho
+        $('table').attr('width', '500px');
 
         $('#Numero_Remetente').attr('value', '32012524');
         $('#Nome_Remetente').attr('value', 'Digipaper');
@@ -59,6 +60,7 @@ $(document).ready(function(){
     if (location.href == 'http://torpedogratis.org/captcha'){ //Pagina do Captcha
 
         $('#right').remove();
+        $('.right-ads').remove();
         $('#mini-header').remove();
         $('#menu').remove();
         $('#social').remove();
